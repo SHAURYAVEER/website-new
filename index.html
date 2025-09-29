@@ -1,15 +1,15 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>For Sumedha 💜 — From Shaurya</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Handwritten romantic font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:"Poppins",sans-serif; }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Dancing Script', cursive; }
     body {
       height:100vh;
       width:100vw;
@@ -21,10 +21,10 @@
       position:relative;
     }
 
-    /* Main message card fills most of screen */
+    /* Main message card */
     .card {
-      width:90vw;
-      height:90vh;
+      width:85vw;
+      height:85vh;
       background:rgba(255,255,255,0.7);
       border-radius:20px;
       box-shadow:0 0 40px rgba(0,0,0,0.15);
@@ -32,7 +32,7 @@
       flex-direction:column;
       align-items:center;
       justify-content:center;
-      padding:20px;
+      padding:25px;
       text-align:center;
       position:relative;
       z-index:2;
@@ -42,9 +42,9 @@
       opacity:0;
       transform:translateY(10px);
       transition:all 0.8s ease;
-      font-size:2rem;
-      margin:10px 0;
-      font-weight:600;
+      font-size:1.5rem; /* smaller for fitting */
+      margin:8px 0;
+      font-weight:500;
       color:#5a104a;
     }
     .line.show { opacity:1; transform:translateY(0); }
@@ -71,94 +71,85 @@
     .bottom-right{ bottom:10px; right:10px;}
     .left-mid{ top:50%; left:10px; transform:translateY(-50%);}
     .right-mid{ top:50%; right:10px; transform:translateY(-50%);}
-  </style>
 
+    /* Floating hearts */
+    .heart {
+      position:absolute;
+      color:purple;
+      font-size:2rem;
+      animation: rise 6s linear infinite;
+      opacity:0.7;
+      z-index:0;
+    }
+    @keyframes rise {
+      0% { transform:translateY(100vh) scale(0.8); opacity:0.8;}
+      50% { opacity:1;}
+      100% { transform:translateY(-10vh) scale(1.2); opacity:0;}
+    }
+  </style>
 </head>
 <body>
-  <!-- Surrounding BTS GIFs (replace src with your own GIF URLs) -->
-  <img class="gif top-left" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTRjdWEwMDY5eHZwZmpnbTNmd2liaGxmY3N4eWthaDdsOWY4aHR1aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3CCXHZWV6F6O9VQ7FL/giphy.gif" alt="BTS gif">
-  <img class="gif top-right" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmlkdDI4Y2pvdWZpeWltajIxN2wwOW55a2Npa3ZoNmI3ZjZvbGhocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kDXxjwpazm9b2LzOMc/giphy.gif" alt="BTS gif">
-  <img class="gif bottom-left" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjU5OHQ0dzdtc2NqNXIybXI1NHRnMnI3MzNkdnp5dWZteDhuaHl0MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hEB3xM0IkTVqNMjg2T/giphy.gif" alt="BTS gif">
-  <img class="gif bottom-right" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDJmYWkyOWF2NjgxM3UxOGo4aWZpdWhxbnk1cDdlbXg1Y2Q1bHd4OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RxcUFNtFzSnGcXtuij/giphy.gif" alt="BTS gif">
-  <img class="gif left-mid" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWZrbHIycnJuYzI0cG45aDlveWd1ZmY1ZTU0NWhnZWkyZXRxcDRoaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c76IJLufpNwSULPk77/giphy.gif" alt="BTS gif">
-  <img class="gif right-mid" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdThlZW5vYWt1M3BkeDBnd2FkOWF4ZWdzNTBsdTlmZDUxMGlkcXk3eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eiRpSPB8OSGVcbkOIJ/giphy.gif" alt="BTS gif">
+  <!-- Surrounding BTS GIFs -->
+  <img class="gif top-left" src="https://media4.giphy.com/media/3CCXHZWV6F6O9VQ7FL/giphy.gif" alt="BTS gif">
+  <img class="gif top-right" src="https://media1.giphy.com/media/kDXxjwpazm9b2LzOMc/giphy.gif" alt="BTS gif">
+  <img class="gif bottom-left" src="https://media3.giphy.com/media/hEB3xM0IkTVqNMjg2T/giphy.gif" alt="BTS gif">
+  <img class="gif bottom-right" src="https://media4.giphy.com/media/RxcUFNtFzSnGcXtuij/giphy.gif" alt="BTS gif">
+  <img class="gif left-mid" src="https://media0.giphy.com/media/c76IJLufpNwSULPk77/giphy.gif" alt="BTS gif">
+  <img class="gif right-mid" src="https://media2.giphy.com/media/eiRpSPB8OSGVcbkOIJ/giphy.gif" alt="BTS gif">
 
   <!-- Main Message -->
-
   <div class="card">
     <div class="message" id="message"></div>
   </div>
 
   <script>
     const lines = [
-      * "Dear Sumedha,"
-* "From the very first glance, you stole my heart."
-* "Every moment with you feels like a dream I never want to wake up from."
-* "Your smile is my sunshine, your laughter my favorite melody."
-* "I feel like I’ve been waiting for you all my life, and now that you’re here, I never want to let you go."
-* "With you, even silence feels like a song."
-* "In our purple world, you are my brightest star."
-* "Together, I know we can turn every day into something magical."
-* "Let’s stay like this, forever and always."
-* "I love you endlessly,"
-* "~Yours, Shaurya."
-
+      "Dear Sumedha,",
+      "From the very first glance, you stole my heart.",
+      "Every moment with you feels like a dream I never want to wake up from.",
+      "Your smile is my sunshine, your laughter my favorite melody.",
+      "I feel like I’ve been waiting for you all my life, and now that you’re here, I never want to let you go.",
+      "With you, even silence feels like a song.",
+      "In our purple world, you are my brightest star.",
+      "Together, I know we can turn every day into something magical.",
+      "Let’s stay like this, forever and always.",
+      "I love you endlessly,",
+      "HAPPY ANNIVERSERY BABY" ,
+      "~Yours, Shaurya."
     ];
 
     const messageEl = document.getElementById("message");
     lines.forEach(text=>{
-      const div=document.createElement("div");
-      div.className="line";
-      div.textContent=text;
+      const div = document.createElement("div");
+      div.className = "line";
+      div.textContent = text;
       messageEl.appendChild(div);
     });
 
     function revealSequence(){
       document.querySelectorAll('.line').forEach(el=>el.classList.remove('show'));
-      let delay=500;
+      let delay = 500;
       document.querySelectorAll('.line').forEach((el,idx)=>{
         setTimeout(()=> el.classList.add('show'), delay);
-        delay+=1200;
+        delay += 1200;
       });
     }
 
-    <style>
-  .heart {
-    position:absolute;
-    color:purple; /* 💜 purple hearts */
-    font-size:2rem;
-    animation: rise 6s linear infinite;
-    opacity:0.7;
-    z-index:0;
-  }
-  @keyframes rise {
-    0% { transform:translateY(100vh) scale(0.8); opacity:0.8;}
-    50% { opacity:1;}
-    100% { transform:translateY(-10vh) scale(1.2); opacity:0;}
-  }
-</style>
+    // Floating purple hearts generator
+    function createHeart(){
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML="💜";
+      heart.style.left = Math.random()*100+"vw";
+      heart.style.fontSize = (Math.random()*20+20)+"px";
+      heart.style.animationDuration = (Math.random()*3+3)+"s";
+      document.body.appendChild(heart);
 
-<script>
-  // Floating purple hearts generator
-  function createHeart(){
-    const heart=document.createElement("div");
-    heart.className="heart";
-    heart.innerHTML="💜"; // purple heart emoji
-    heart.style.left=Math.random()*100+"vw";
-    heart.style.fontSize=(Math.random()*20+20)+"px";
-    heart.style.animationDuration=(Math.random()*3+3)+"s";
-    document.body.appendChild(heart);
+      setTimeout(()=>heart.remove(),6000);
+    }
 
-    setTimeout(()=>heart.remove(),6000);
-  }
-  setInterval(createHeart,600);
-</script>
-
-
+    setInterval(createHeart,600);
     window.onload = revealSequence;
   </script>
-
 </body>
 </html>
-
-
